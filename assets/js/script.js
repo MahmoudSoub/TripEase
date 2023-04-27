@@ -1,8 +1,4 @@
-'use strict';
-
-/**
- * navbar toggle
- */
+// nav toggle
 
 const overlay = document.querySelector("[data-overlay]");
 const navOpenBtn = document.querySelector("[data-nav-open-btn]");
@@ -19,22 +15,17 @@ const navToggleEvent = function (elem) {
       overlay.classList.toggle("active");
     });
   }
-}
+};
 
 navToggleEvent(navElemArr);
 navToggleEvent(navLinks);
 
-
-
-/**
- * header sticky & go to top
- */
+// sticky header, go to top
 
 const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-
   if (window.scrollY >= 200) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
@@ -42,5 +33,4 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     goTopBtn.classList.remove("active");
   }
-
 });
